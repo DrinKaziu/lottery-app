@@ -5,6 +5,7 @@ class Lottery extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      title: 'Lotto',
       nums: [],
       maxNum: 40
     }
@@ -18,7 +19,8 @@ class Lottery extends Component {
   render () {
     console.log(this.state.nums)
     return (
-      <div>
+      <div className="Lottery">
+        <h2>{this.state.title}</h2>
         <ul>
           {this.state.nums.map(num => <Ball number={num}/>)}
         </ul>

@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
+import './Ball.css';
 
 class Ball extends Component {
   render () {
     return (
-      <li>{this.props.number}</li>
+      <li className="Ball">{this.props.number}</li>
     )
   }
 }
