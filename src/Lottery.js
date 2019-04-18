@@ -24,13 +24,13 @@ class Lottery extends Component {
 
   render () {
     return (
-      <div className="Lottery">
-        <h2>{this.props.title}</h2>
-        <ul>
-          {this.state.nums.map(num => <Ball number={num}/>)}
-        </ul>
+      <section className="Lottery">
+        <h1>{this.props.title}</h1>
+        <div>
+          {this.state.nums.map((num, idx) => <Ball key={idx} number={num}/>)}
+        </div>
         <button onClick={this.generateNums}>Generate!!</button>
-      </div>
+      </section>
     )
   }
 }
